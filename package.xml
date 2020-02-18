@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>couchbase-cxx-ros</name>
+  <version>0.0.0</version>
+  <description>The couchbase-cxx-ros package</description>
+
+  <maintainer email="fog@ipa.fhg">fog</maintainer>
+  <license>Apache 2.0</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <depend>sensor_msgs</depend>
+  <depend>roslib</depend>
+  <depend>pcl_ros</depend>
+
+</package>
