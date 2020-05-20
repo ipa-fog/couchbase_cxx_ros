@@ -2,6 +2,7 @@
 #ifndef LCB_PLUSPLUS_H
 #define LCB_PLUSPLUS_H
 
+
 #include <libcouchbase/couchbase.h>
 #include <libcouchbase/api3.h>
 #include <libcouchbase/pktfwd.h>
@@ -16,6 +17,7 @@
 #include <memory>
 #include <libcouchbase/couchbase++/forward.h>
 #include <libcouchbase/couchbase++/status.h>
+#include <cassert>
 
 namespace Couchbase {
 

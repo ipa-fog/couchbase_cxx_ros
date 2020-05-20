@@ -57,6 +57,7 @@ QueryMeta::QueryMeta(const lcb_RESPN1QL *resp)
     }
 }
 
+inline
 QueryRow::QueryRow(const lcb_RESPN1QL *resp) {
     m_row = Buffer(resp->row, resp->nrow);
 }

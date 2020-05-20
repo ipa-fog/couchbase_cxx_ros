@@ -69,6 +69,7 @@ ViewRow::detatch_buf(Buffer& tgt, char *tmp) {
 
 }
 
+inline
 ViewRow::ViewRow(Client& c, const lcb_RESPVIEWQUERY *resp) {
     assert(! (resp->rflags & LCB_RESP_F_FINAL) );
     m_key = Buffer(resp->key, resp->nkey);
@@ -158,14 +159,14 @@ CallbackViewQuery::~CallbackViewQuery() {
     stop();
 }
 
-void
+inline void
 ViewQuery::handle_row(ViewRow&& row) {
     row.detatch();
     rp_add(std::move(row));
     cli.breakout();
 }
 
-void
+inline void
 ViewQuery::handle_done(ViewMeta&& m) {
     m_meta = std::move(m);
     cli.breakout();
